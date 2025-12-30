@@ -8,29 +8,50 @@ import {
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { useMemo } from "react";
 
 const skills = [
   "React",
   "Next.js",
   "TypeScript",
+  "JavaScript",
+  "HTML5",
+  "CSS3",
+  "Python",
+  "C/C++",
+  "Java",
   "Node.js",
   "GraphQL",
   "PostgreSQL",
+  "My-SQL",
   "MongoDB",
+  "Express.js",
   "Redis",
   "Docker",
   "AWS",
   "Vercel",
+  "Netlify",
+  "Appwrite",
+  "Clerk",
+  "Inngest",
+  "Stream-chat",
   "Tailwind CSS",
-  "Prisma",
-  "Jest",
-  "Cypress",
-  "Figma",
+  "Bootstraps",
   "Git",
   "GitHub Actions",
 ];
 
 export const Hero = () => {
+  const dots = useMemo(() => 
+    [...Array(30)].map(() => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      duration: 15 + Math.random() * 20,
+      delay: Math.random() * 5,
+    })),
+    []
+  );
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg */}
@@ -45,17 +66,16 @@ export const Hero = () => {
 
       {/* Green Dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {dots.map((dot, i) => (
           <div
+            key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
               backgroundColor: "#20B2A6",
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${
-                15 + Math.random() * 20
-              }s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`,
+              left: `${dot.left}%`,
+              top: `${dot.top}%`,
+              animation: `slow-drift ${dot.duration}s ease-in-out infinite`,
+              animationDelay: `${dot.delay}s`,
             }}
           />
         ))}
@@ -93,8 +113,10 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
+              <Button size="lg" asChild>
+                <a href="#contact">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </a>
               </Button>
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
@@ -121,18 +143,13 @@ export const Hero = () => {
             </div>
           </div>
           {/* Right Column - Profile Image */}
-          <div className="relatice animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300">
             {/* Profile Image */}
             <div className="relative max-w-md mx-auto">
-              <div
-                className="absolute inset-0 
-              rounded-3xl bg-gradient-to-br 
-              from-primary/30 via-transparent 
-              to-primary/10 blur-2xl animate-pulse"
-              />
+              
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.jpg"
+                  src="photo.jpg"
                   alt="Pedro Machado"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
@@ -147,12 +164,12 @@ export const Hero = () => {
                   </div>
                 </div>
                 {/* Stats Badge */}
-                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">5+</div>
-                  <div className="text-xs text-muted-foreground">
+                {/* <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                  { <div className="text-2xl font-bold text-primary">5+</div> }
+                  { <div className="text-xs text-muted-foreground">
                     Years Exp.
-                  </div>
-                </div>
+                  </div> }
+                </div> */}
               </div>
             </div>
           </div>
@@ -174,7 +191,7 @@ export const Hero = () => {
             />
             <div className="flex animate-marquee">
               {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                <div key={`${skill}-${idx}`} className="flex-shrink-0 px-8 py-4">
                   <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
                     {skill}
                   </span>
