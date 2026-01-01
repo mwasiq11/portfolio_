@@ -2,41 +2,25 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "Botrix AI – Intelligent Chatbot Application",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
-    github: "#",
+      "Built a production-grade AI assistant using React, Firebase, and OpenAI’s Threads API with persistent session memory. I implemented real-time chat history and authentication via Firestore, designed an interactive UI for file uploads and message filtering, and optimized state management to reduce re-renders by 50%.",
+    image: "/photo1.PNG",
+    tags: ["React", "Firebase", "OpenAI","Tailwind","FireStore","Threads API LLM "],
+    link: "https://botrixchatbot.netlify.app/app",
+    github: "https://github.com/mwasiq11/Chat-bot-Application",
   },
   {
-    title: "E-Commerce Platform",
+    title: "DevChat – Coding & Live Technical Interview Platform",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
+      "Developed a real-time coding platform using React, Node.js, and Stream API, featuring multi-language code execution (JS, Python, Java, C++) in a sandboxed environment. I integrated video/chat SDKs for collaborative editing with sub-100ms latency, implemented Clerk RBAC for secure access, and built a data-driven dashboard using MongoDB aggregation and Inngest for automated scheduling.",
+    image: "/photo2.PNG",
+    tags: ["React", "Express JS", "MongoDB", "Clerk", "Stream-chat","Inngest","Tailwind"],
+    link: "https://devcodes.dpdns.org",
+    github: "https://github.com/mwasiq11/DevChat",
   },
-  {
-    title: "AI Writing Assistant",
-    description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Project Management Tool",
-    description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
-  },
+  
+  
 ];
 
 export const Projects = () => {

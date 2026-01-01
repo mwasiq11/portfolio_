@@ -89,7 +89,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                Full Stack Developer
               </span>
             </div>
 
@@ -105,32 +105,39 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Pedro Machado — a software engineer specializing in
-                React, Next.js, and TypeScript. I build scalable, performant web
+                Hi, I'm Muhammad Wasiq.A Full Stack Developer Proficient in
+                Mern Stack. I build scalable, performant web
                 applications that users love.
               </p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg" asChild>
-                <a href="#contact">
-                  Contact Me <ArrowRight className="w-5 h-5" />
-                </a>
-              </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Download CV
-              </AnimatedBorderButton>
-            </div>
+                  <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+                    <a 
+                    href="#contact"
+                    className="relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25 px-8 py-4 text-lg"
+                    >
+                    <span className="relative flex items-center justify-center gap-2">
+                      Contact Me <ArrowRight className="w-5 h-5" />
+                    </span>
+                    </a>
+                    <a 
+                    href="/CV_Muhammad_Wasiq.pdf" 
+                    download="CV_Muhammad_Wasiq.pdf"
+                    >
+                    <AnimatedBorderButton>
+                      <Download className="w-5 h-5" />
+                      Download CV
+                    </AnimatedBorderButton>
+                    </a>
+                  </div>
 
-            {/* Social Links */}
+                  {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/mwasiq11" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/muhammad-wasiq-a47851355/" },
               ].map((social, idx) => (
                 <a
                   key={idx}

@@ -49,22 +49,13 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+               I am a Full-Stack Developer Proficient in MERN stack and Next.js. My expertise lies in bridging the gap between robust backend architecture and high-performance frontend experiences.
               </p>
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                I specialize in React, TypeScript, and Node.js, with a proven track record of implementing complex features like real-time communication (Stream API), secure authentication (Clerk, JWT), and automated workflows (Inngest). My approach to development is rooted in a strong foundation of Data Structures and Algorithms, which I refine through active competitive programming on LeetCode.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                Driven by a passion for technical excellence and system design, I thrive on turning complex problems into elegant, user-centric solutions. When I'm not architecting full-stack systems, I’m exploring emerging DevOps tools or contributing to the developer community by sharing insights on modern web performance.
               </p>
             </div>
 
