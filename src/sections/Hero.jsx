@@ -4,7 +4,6 @@ import {
   ChevronDown,
   Github,
   Linkedin,
-  Twitter,
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
@@ -39,6 +38,22 @@ const skills = [
   "Bootstraps",
   "Git",
   "GitHub Actions",
+  "n8n",
+  "Tanstack Query",
+  "Zustand",
+  "Postman",
+  "Rest API",
+  "React Context API",
+  "Redux/Redux Toolkit",
+  "Sentry",
+  "Figma",
+  "Firebase",
+  "Firestore",
+  "OpenAI",
+  "JWT",
+  "OAuth",
+  "CI/CD",
+
 ];
 
 export const Hero = () => {
